@@ -1,0 +1,759 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; /* Space between logo and nav */
+  align-items: center; /* Vertically center the items */
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(20, 18, 18, 0.1);
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.header nav {
+  display: flex;
+}
+
+.header nav ul {
+  display: flex; /* Horizontally align links */
+  list-style: none; /* Remove bullets */
+  margin: 0;
+  padding: 0;
+}
+
+.header nav ul li {
+  margin-right: 15px; /* Space between links */
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.header nav ul li a:hover {
+  color: #d81b60;
+}
+
+.logo img {
+  height: 50px; /* Adjust logo size */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Dropdown styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-weight: bold; /* Make the "Roles" text bold */
+}
+
+.dropbtn {
+  cursor: pointer;
+  font-weight: bold;
+  color: #000; /* Default color */
+}
+
+.dropdown-content {
+  display: none; /* Hide by default */
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+  z-index: 1;
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.dropdown-content li {
+  padding: 10px;
+}
+
+.dropdown-content li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1; /* Show on hover */
+}
+
+.dropdown:hover .dropbtn {
+  color: #d81b60; /* Change the color of "Roles" when hovered */
+}
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: no-repeat center center/cover;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 1;
+}
+
+.hero .hero-content {
+  position: relative;
+  z-index: 2; /* Content above the overlay */
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+}
+
+.hero button {
+  background-color: #d81b60;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 1em;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background-color: #c2185b;
+}
+
+/* Section styling */
+.section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Section Title */
+.section h2 {
+  color: #d81b60;
+  margin-bottom: 20px;
+}
+
+/* Section Paragraph */
+.section p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+/* Icon Container */
+.section .icons {
+  display: flex;
+  justify-content: center; /* Align the icons to the center */
+  gap: 30px; /* Space between icons */
+  flex-wrap: wrap; /* Wrap icons for smaller screens */
+}
+
+/* Individual Icon Box */
+.section .icon {
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center the content horizontally */
+  width: 200px;
+  text-align: center; /* Align text to the center */
+  vertical-align: top;
+}
+
+/* Icon Image */
+.section img {
+  width: 80px;
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+/* For better spacing and responsive adjustments */
+@media screen and (max-width: 768px) {
+  .section .icons {
+    flex-direction: column; /* Stack icons vertically on smaller screens */
+    gap: 20px;
+  }
+}
+
+
+/* Footer */
+.footer {
+  background-color: #c2185b;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footer h3 {
+  margin-bottom: 15px;
+}
+
+.footer p,
+.footer a {
+  color: white;
+  font-size: 14px;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 20px;
+  color: white;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+.app-links img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.qr-codes img {
+  height: 100px;
+  margin-right: 10px;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+/*login .css*/
+
+.login-container {
+  display: flex;
+  height: 100vh;
+}
+
+.login-left {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.login-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  background-color: #fff;
+}
+
+.fade-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.right-text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.right-text h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.right-text p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding: 12px 45px; /* Adjust padding to create space for the icons */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #1976d2;
+  font-size: 1.2rem;
+}
+
+.form-remember {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.remember-me label {
+  margin-left: 5px;
+}
+
+.forgot-password {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.btn-login {
+  width: 100%;
+  background-color: #1976d2;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  background-color: #1565c0;
+}
+
+.alternative-login {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Responsive Button Styling for Google and Apple */
+.btn-google, .btn-apple {
+  width: 100%;
+  background-color: white;
+  color: #1976d2; /* Use primary color for text */
+  padding: 12px; /* Same padding as login button */
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem; /* Font size consistent with the login button */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-google:hover, .btn-apple:hover {
+  background-color: #f5f5f5; /* Light grey hover effect */
+}
+
+.create-account {
+  text-align: center;
+}
+
+.create-account a {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.create-account a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .btn-login, .btn-google, .btn-apple {
+    padding: 10px;
+    font-size: 0.9rem; /* Slightly smaller font for smaller screens */
+  }
+}
+
+
+/* Signup.css */
+.signup-container {
+  display: flex;
+  height: 100vh;
+}
+
+.signup-left {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.signup-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  background-color: #fff;
+  position: relative;
+}
+
+.fade-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fade effect on the image only */
+}
+
+.right-text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.right-text h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.right-text p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+
+/*donor dashboard*/
+/* Container layout */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  background-color: #20273a;
+  color: white;
+  padding: 20px;
+}
+
+/* Profile section */
+.profile-section {
+  text-align: center;
+  background-image: url('https://www.example.com/background-image.jpg'); /* Replace with your background image */
+  background-size: cover;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+
+.profile-section h2 {
+  color: white;
+}
+
+/* Navigation links in the sidebar */
+.nav-links a {
+  display: block;
+  color: white;
+  margin: 15px 0;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #ff4081;
+}
+
+/* Main content styling */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f0f0f5;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #20273a;
+}
+
+/* Wallet section */
+.wallet {
+  display: flex;
+  align-items: center;
+}
+
+.add-fund-btn {
+  background-color: #ff4081;
+  color: white;
+  padding: 10px 20px;
+}
+
+/* Grid layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Grid button styling */
+.grid-button {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: none;
+  font-size: 18px;
+  color: white;
+  background-color: #0d6efd;
+  border-radius: 10px;
+  box-shadow: 0 
+}
+
+
+/* contactus.css */
+/* contactus.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Light gray background for the whole page */
+}
+
+.header {
+  background-color: #ffffff; /* White background for header */
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd; /* Light gray border at the bottom of the header */
+}
+
+.logo img {
+  height: 50px; /* Adjust logo size */
+  margin-left: 20px; /* Space from the left */
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #333; /* Dark text color */
+  font-weight: bold;
+}
+
+.nav-list li a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.social-media {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.social-media a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.social-media img {
+  height: 24px; /* Adjust social media icon size */
+}
+
+.contact-section {
+  padding: 20px;
+  background-color: #007bff; /* Background color for the contact section */
+  color: #ffffff; /* Text color in the contact section */
+  text-align: center;
+  border-radius: 8px;
+  margin: 20px auto;
+}
+
+.contact-heading {
+  margin-bottom: 20px;
+}
+
+.contact-options {
+  display: flex;
+  justify-content: space-between; /* Distribute boxes evenly across the screen */
+  flex-wrap: wrap; /* Wrap boxes to the next line if needed */
+}
+
+.contact-option {
+  padding: 20px;
+  background-color: #ffffff; /* Background color for each contact box */
+  color: #333; /* Text color for each contact box */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+  text-align: center;
+  flex: 1; /* Allow boxes to grow and shrink */
+  max-width: 300px; /* Maximum width for each box */
+  margin: 10px; /* Space around each box */
+}
+
+/*get involed*/
+.get-involved {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.get-involved {
+  padding: 60px 20px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* NGO.JS styling */
+/* Grocersupplier.JS styling */
+
+.grocery-supplier {
+  text-align: center;
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #e5097f;
+  margin-bottom: 10px;
+}
+
+.urdu-title {
+  font-size: 1.5rem;
+  color: #e5097f;
+  margin-bottom: 30px;
+}
+
+.benefits {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.benefit {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  width: 45%;
+  text-align: left;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #e5097f;
+  margin-bottom: 10px;
+}
+
+.benefit h4 {
+  font-size: 1.2rem;
+  color: #003366;
+}
+
+.benefit-description {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.urdu-description {
+  font-size: 0.9rem;
+  color: #003366;
+  margin-top: 10px;
+}
+
+.card{
+  height: 350px;
+}

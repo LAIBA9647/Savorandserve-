@@ -1,0 +1,156 @@
+/* Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.wallet {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wallet button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.user-profile img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+/* Content Section */
+.content {
+  display: flex;
+  flex-grow: 1;
+  background-color: #f9f9f9;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info h3 {
+  margin: 0;
+}
+
+.user-info p {
+  margin-top: 5px;
+  color: #888;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu ul li {
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.menu ul li.active {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.gift-impact-services {
+  margin-top: 20px;
+}
+
+.gift-impact-services li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.gift-impact-services li img {
+  height: 30px;
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: white;
+}
+
+.donate-to-ngos,
+.impact-footprint,
+.gift-services {
+  margin-bottom: 20px;
+}
+
+.donate-to-ngos img {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.impact-footprint .impact-chart {
+  height: 200px;
+  background-color: #e9ecef;
+  margin-bottom: 10px;
+}
+
+.impact-categories li {
+  margin: 5px 0;
+}
+
+.gift-service-cards {
+  display: flex;
+  gap: 20px;
+}
+
+.gift-service-card {
+  width: calc(50% - 10px);
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.gift-service-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.dashboard-container {
+  background-color: #f0f0f0;
+  padding: 20px;
+}

@@ -1,0 +1,41 @@
+/* Layout Fix */
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+/* Fix sidebar width */
+.dashboard-sidebar {
+  width: 240px;
+  min-width: 240px;
+}
+
+/* Main content */
+.dashboard-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+@media (max-width: 768px) {
+  /* Adjust layout for mobile */
+  .dashboard {
+    flex-direction: column;
+  }
+  
+  .dashboard-sidebar {
+    width: 100%;
+    min-width: 100%;
+  }
+  
+  .dashboard-content {
+    padding: 10px;
+  }
+}

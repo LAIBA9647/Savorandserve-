@@ -1,0 +1,84 @@
+/* Basic reset and body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the cards */
+.container {
+    display: flex;
+    justify-content: space-between; /* Space between cards */
+    align-items: stretch; /* Ensure all cards have equal height */
+    padding: 50px;
+    gap: 20px; /* Spacing between the cards */
+    height: 30%;
+}
+
+/* Card layout */
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 22%; /* Adjust card width */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure consistent spacing between elements */
+    flex-grow: 1; /* Ensure cards take equal height */
+}
+
+/* Heading for each card */
+h2 {
+    color: #333;
+    margin: 10px 0;
+    font-size: 20px; /* Adjust heading size */
+}
+
+/* Description text */
+p {
+    color: #555;
+    font-size: 16px;
+    margin: 15px 0;
+    line-height: 1.5;
+    height: 10px;
+}
+
+/* List of resources */
+.resources {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    flex-grow: 1; /* Takes up remaining space to push the button down */
+}
+
+.resources li {
+    margin-bottom: 10px;
+}
+
+.resources a {
+    text-decoration: none;
+    color: #d63384;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* "Read More" button */
+.read-more {
+    background-color: transparent;
+    border: 2px solid #d63384;
+    color: #d63384;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 10px;
+}
+
+.read-more:hover {
+    background-color: #d63384;
+    color: white;
+}

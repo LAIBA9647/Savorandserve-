@@ -1,0 +1,73 @@
+/* Basic reset and body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container to hold both sections */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+    gap: 30px;
+  }
+  
+  /* Card layout for each section */
+  .card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+  
+  /* Heading for each card */
+  .impactor h2, .ngo h2 {
+    color: #d63384; /* Pink color */
+  }
+  
+  /* Text description */
+  .impactor p, .ngo p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  /* List of resources */
+  .resources {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .resources li {
+    margin-bottom: 10px;
+  }
+  
+  .resources a {
+    text-decoration: none;
+    color: #d63384;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  /* "Read More" button styling */
+  .read-more {
+    background-color: transparent;
+    border: 2px solid #d63384;
+    color: #d63384;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .read-more:hover {
+    background-color: #d63384;
+    color: white;
+  }
+  
